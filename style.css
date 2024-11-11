@@ -1,0 +1,40 @@
+/* Стили для меню */
+.menu {
+    background-color: #333;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: #555;
+}
+
+/* Скрываем подменю по умолчанию */
+.submenu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 0;
+}
+/* Показываем подменю при наведении */
+.menu ul li.submenu:hover ul {
+    display: block;
+}
