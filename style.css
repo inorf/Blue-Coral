@@ -1,6 +1,17 @@
-/* Стили для меню */
+body{
+    background-color: aquamarine;
+}
+
 .menu {
+    position: fixed;
+    right: 10%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    border-left: #505050 solid 12px;
+    border-right: #505050 solid 12px;
     background-color: #333;
+    border-radius: 7px;
 }
 
 .menu ul {
@@ -12,29 +23,61 @@
 
 .menu ul li {
     position: relative;
+    width: 100%;
 }
 
 .menu ul li a {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
     display: block;
     padding: 15px 20px;
     color: #fff;
     text-decoration: none;
+    min-width:max-content;
 }
 
-.menu ul li a:hover {
-    background-color: #555;
-}
-
-/* Скрываем подменю по умолчанию */
 .submenu ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #444;
+    background-color: #333;
+    opacity: 85%;
     padding: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
-/* Показываем подменю при наведении */
+
 .menu ul li.submenu:hover ul {
     display: block;
+}
+
+.animated-box {
+    line-height: 0.6;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.animated-box::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    background-color: aquamarine;
+    transform: translateX(-100%);
+    transition: transform 0.1s ease-in-out;
+    border-radius: 3px;
+}
+
+.animated-box:hover {
+    transform: translateX(4px);
+}
+
+.animated-box:hover::before {
+    transform: translateX(0);
 }
