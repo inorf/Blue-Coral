@@ -1,40 +1,103 @@
-/* Стили для меню */
-.menu {
-    background-color: #333;
-}
-
-.menu ul {
-    list-style-type: none;
-    padding: 0;
+body {
     margin: 0;
-    display: flex;
-}
-
-.menu ul li {
-    position: relative;
-}
-
-.menu ul li a {
-    display: block;
-    padding: 15px 20px;
-    color: #fff;
-    text-decoration: none;
-}
-
-.menu ul li a:hover {
-    background-color: #555;
-}
-
-/* Скрываем подменю по умолчанию */
-.submenu ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #444;
     padding: 0;
+    overflow-x: hidden;
 }
-/* Показываем подменю при наведении */
-.menu ul li.submenu:hover ul {
+
+.menu {
     display: block;
+    background-color: #333;
+    text-align: center;
+    font-size: 140%;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 70%;
+    padding: 10px;
+    position: absolute;
+    z-index: 100;
+}
+
+.description {
+    background-size: 100%;
+    background-position: right;
+    background-position-y: 52%;
+    background-repeat: no-repeat;
+    background-image: url("https://img.freepik.com/free-photo/portrait-confident-model-grape-leaves_651396-136.jpg?t=st=1732279952~exp=1732283552~hmac=1565406efac564a84ef55beba514c82aaecf88e029b40fb401cf5ad028546619&w=1380");
+    position: absolute;
+    display: relative;
+    left: 0;
+    top: 0;
+    min-width: 110%;
+    height: 52%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.description-text {
+    background-color: linear-gradient(to center, #555, #333);
+    opacity: 70%;
+    border-radius: 60px;
+    margin-left: 3%;
+    top: 30%;
+    position: absolute;
+    font-size: 3vh;
+}
+
+.description-text p {
+    opacity: 100%;
+}
+
+.menu a {
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block;
+}
+
+.menu a div {
+    display: flex; /* Use flex to center text */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    padding: 15px; /* Add padding inside each menu item */
+    color: white; /* Text color */
+    min-width: 100px; /* Set a minimum width for each menu item */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth hover transition */
+}
+
+.menu a div:hover {
+    background-color: #555; /* Change background color on hover */
+    color: antiquewhite; /* Change text color on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+@media screen and (max-width: 750px) and (orientation: portrait) {
+    .menu {
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .menu a div {
+        padding: 7px;
+        font-size: 2vh;
+        margin-right: 3%;
+    }
+    .description{
+        background-position: top;
+        background-position-x: 75%;
+        height: 50%;
+    }
+    .description-text {
+        margin-left: 2%;
+        font-size: 2vh;
+    }
+}
+@media screen and (orientation: landscape) {
+    .description-text {
+        font-size: 4vh;
+    
 }
