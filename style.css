@@ -1,6 +1,3 @@
-body{
-    background-color: aquamarine;
-}
 
 .menu {
     position: fixed;
@@ -10,7 +7,7 @@ body{
     justify-content: center;
     border-left: #505050 solid 12px;
     border-right: #505050 solid 12px;
-    background-color: #333;
+    background-color: darkgreen;
     border-radius: 7px;
 }
 
