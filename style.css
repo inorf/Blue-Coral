@@ -4,6 +4,12 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .menu {
     display: block;
     background-color: #333;
@@ -99,5 +105,5 @@ body {
 @media screen and (orientation: landscape) {
     .description-text {
         font-size: 4vh;
-    
+    }
 }
